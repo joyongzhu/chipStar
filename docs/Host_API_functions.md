@@ -3,35 +3,30 @@
 
 ## **1. Device Management**
 
-|   **CUDA**                                                |   **HIP**                         |  **chipStar**|
-|-----------------------------------------------------------|-----------------------------------|:----------------:|
-
 ## DEVICE API
 
+|   **CUDA**                                                |   **HIP**                         |  **chipStar**|
+|-----------------------------------------------------------|-----------------------------------|:----------------:|
 | `cudaChooseDevice`                                        | `hipChooseDevice`                 | Y |
 | `cudaDeviceGetAttribute`                                  | `hipDeviceGetAttribute`           | Y |
 | `cudaDeviceGetByPCIBusId`                                 | `hipDeviceGetByPCIBusId`          | Y |
 | `cudaDeviceGetCacheConfig`                                | `hipDeviceGetCacheConfig`         | Y |
 | `cudaDeviceGetLimit`                                      | `hipDeviceGetLimit`               | Y* |
-
 | `cudaDeviceGetPCIBusId`                                   | `hipDeviceGetPCIBusId`            | Y |
 | `cudaDeviceGetSharedMemConfig`                            | `hipDeviceGetSharedMemConfig`     | N |
 | `cudaDeviceGetStreamPriorityRange`                        | `hipDeviceGetStreamPriorityRange` | Y |
 | `cudaDeviceReset`                                         | `hipDeviceReset`                  | Y |
 | `cudaDeviceSetCacheConfig`                                | `hipDeviceSetCacheConfig`         | Y |
-
 | `cudaDeviceSetLimit`                                      | `hipDeviceSetLimit`               | Y |
 | `cudaDeviceSetSharedMemConfig`                            | `hipDeviceSetSharedMemConfig`     | N |
 | `cudaDeviceSynchronize`                                   | `hipDeviceSynchronize`            | Y |
 | `cudaGetDevice`                                           | `hipGetDevice`                    | Y |
 | `cudaGetDeviceCount`                                      | `hipGetDeviceCount`               | Y |
-
 | `cudaGetDeviceFlags`                                      | `hipGetDeviceFlags`               | N |
 | `cudaGetDeviceProperties`                                 | `hipGetDeviceProperties`          | Y |
 | `cudaSetDevice`                                           | `hipSetDevice`                    | Y |
 | `cudaSetDeviceFlags`                                      | `hipSetDeviceFlags`               | N |
 | `cudaThreadSynchronize`                                   | `hipDeviceSynchronize`            | Y |
-
 | `cudaThreadExit`                                          | `hipDeviceReset`                  | Y |
 | `cudaThreadGetCacheConfig`                                | `hipDeviceGetCacheConfig`         | N |
 | `cudaThreadSetCacheConfig`                                | `hipDeviceSetCacheConfig`         | N |
@@ -39,6 +34,8 @@
 
 ############## IPC API
 
+|   **CUDA**                                                |   **HIP**                         |  **chipStar**|
+|-----------------------------------------------------------|-----------------------------------|:----------------:|
 | `cudaIpcCloseMemHandle`                                   | `hipIpcCloseMemHandle`            | N |
 | `cudaIpcGetEventHandle`                                   | `hipIpcGetEventHandle`            | N |
 | `cudaIpcGetMemHandle`                                     | `hipIpcGetMemHandle`              | N |
@@ -63,7 +60,6 @@
 | `cudaStreamCreateWithFlags`                               | `hipStreamCreateWithFlags`    | Y |
 | `cudaStreamCreateWithPriority`                            | `hipStreamCreateWithPriority` | Y |
 | `cudaStreamDestroy`                                       | `hipStreamDestroy`            | Y |
-
 | `cudaStreamGetFlags`                                      | `hipStreamGetFlags`           | Y |
 | `cudaStreamGetPriority`                                   | `hipStreamGetPriority`        | Y |
 | `cudaStreamQuery`                                         | `hipStreamQuery`              | Y |
@@ -92,7 +88,6 @@
 | `cudaFuncSetCacheConfig`                                  |`hipFuncSetCacheConfig`                | N |
 | `cudaFuncSetSharedMemConfig`                              |`hipFuncSetSharedMemConfig`            | N |
 | `cudaLaunchKernel`                                        |`hipLaunchKernel`                      | Y |
-
 | `cudaLaunchCooperativeKernel`                             |`hipLaunchCooperativeKernel`           | N    |
 | `cudaLaunchCooperativeKernelMultiDevice`                  |`hipLaunchCooperativeKernelMultiDevice`| N    |
 | `cudaConfigureCall`                                       | `hipConfigureCall`                    | Y |
@@ -121,54 +116,45 @@
 | `cudaFreeArray`                                           | `hipFreeArray`                | Y |
 | `cudaFreeHost`                                            | `hipHostFree`                 | Y |
 | `cudaGetSymbolAddress`                                    | `hipGetSymbolAddress`         | Y |
-
 | `cudaGetSymbolSize`                                       | `hipGetSymbolSize`            | Y |
 | `cudaHostAlloc`                                           | `hipHostMalloc`               | Y |
 | `cudaHostGetDevicePointer`                                | `hipHostGetDevicePointer`     | Y |
 | `cudaHostGetFlags`                                        | `hipHostGetFlags`             | Y |
 | `cudaHostRegister`                                        | `hipHostRegister`             | Y |
-
 | `cudaHostUnregister`                                      | `hipHostUnregister`           | Y |
 | `cudaMalloc`                                              | `hipMalloc`                   | Y |
 | `cudaMalloc3D`                                            | `hipMalloc3D`                 | Y |
 | `cudaMalloc3DArray`                                       | `hipMalloc3DArray`            | Y |
 | `cudaMallocArray`                                         | `hipMallocArray`              | Y |
-
 | `cudaMallocHost`                                          | `hipHostMalloc`               | Y |
 | `cudaMallocManaged`                                       | `hipMallocManaged`            | Y |
 | `cudaMemGetInfo`                                          | `hipMemGetInfo`               | Y |
 | `cudaMemcpy`                                              | `hipMemcpy`                   | Y |
 | `cudaMemcpy2D`                                            | `hipMemcpy2D`                 | Y |
-
 | `cudaMemcpy2DAsync`                                       | `hipMemcpy2DAsync`            | Y |
 | `cudaMemcpy2DFromArray`                                   | `hipMemcpy2DFromArray`        | Y |
 | `cudaMemcpy2DFromArrayAsync`                              | `hipMemcpy2DFromArrayAsync`   | Y |
 | `cudaMemcpy2DToArray`                                     | `hipMemcpy2DToArray`          | Y |
 | `cudaMemcpy3D`                                            | `hipMemcpy3D`                 | Y |
-
 | `cudaMemcpy3DAsync`                                       | `hipMemcpy3DAsync`            | Y |
 | `cudaMemcpyAsync`                                         | `hipMemcpyAsync`              | Y |
 | `cudaMemcpyFromSymbol`                                    | `hipMemcpyFromSymbol`         | Y |
 | `cudaMemcpyFromSymbolAsync`                               | `hipMemcpyFromSymbolAsync`    | Y |
 | `cudaMemcpyPeer`                                          | `hipMemcpyPeer`               | N |
-
 | `cudaMemcpyPeerAsync`                                     | `hipMemcpyPeerAsync`          | N |
 | `cudaMemcpyToSymbol`                                      | `hipMemcpyToSymbol`           | Y |
 | `cudaMemcpyToSymbolAsync`                                 | `hipMemcpyToSymbolAsync`      | Y |
 | `cudaMemset`                                              | `hipMemset`                   | Y |
 | `cudaMemset2D`                                            | `hipMemset2D`                 | Y |
-
 | `cudaMemset2DAsync`                                       | `hipMemset2DAsync`            | Y |
 | `cudaMemset3D`                                            | `hipMemset3D`                 | Y |
 | `cudaMemset3DAsync`                                       | `hipMemset3DAsync`            | Y |
 | `cudaMemsetAsync`                                         | `hipMemsetAsync`              | Y |
 | `make_cudaExtent`                                         | `make_hipExtent`              | Y |
-
 | `make_cudaPitchedPtr`                                     | `make_hipPitchedPtr`          | Y |
 | `make_cudaPos`                                            | `make_hipPos`                 | Y |
 | `cudaMemcpyFromArray`                                     | `hipMemcpyFromArray`          | Y |
 | `cudaMemcpyToArray`                                       | `hipMemcpyToArray`            | Y |
-
 | ?                                                         | `hipMemPrefetchAsync`         | N |
 | ?                                                         | `hipMemAdvise`                | N |
 | ?                                                         | `hipMemRangeGetAttribute`     | N |
@@ -196,7 +182,6 @@
 | `cudaBindTextureToArray`                                  | `hipBindTextureToArray`          | Y |
 | `cudaBindTextureToMipmappedArray`                         | `hipBindTextureToMipmappedArray` | Y |
 | `cudaCreateChannelDesc`                                   | `hipCreateChannelDesc`           | Y |
-
 | `cudaGetChannelDesc`                                      | `hipGetChannelDesc`              | Y |
 | `cudaGetTextureAlignmentOffset`                           | `hipGetTextureAlignmentOffset`   | Y |
 | `cudaGetTextureReference`                                 | `hipGetTextureReference`         | Y |
@@ -235,43 +220,36 @@
 | `cudaGraphAddEmptyNode`                                   |                               | N                |
 | `cudaGraphAddHostNode`                                    |                               | N                |
 | `cudaGraphAddKernelNode`                                  |                               | N                |
-
 | `cudaGraphAddMemcpyNode`                                  |                               | N                |
 | `cudaGraphAddMemsetNode`                                  |                               | N                |
 | `cudaGraphChildGraphNodeGetGraph`                         |                               | N                |
 | `cudaGraphClone`                                          |                               | N                |
 | `cudaGraphCreate`                                         |                               | N                |
-
 | `cudaGraphDestroy`                                        |                               | N                |
 | `cudaGraphDestroyNode`                                    |                               | N                |
 | `cudaGraphExecDestroy`                                    |                               | N                |
 | `cudaGraphGetEdges`                                       |                               | N                |
 | `cudaGraphGetNodes`                                       |                               | N                |
-
 | `cudaGraphGetRootNodes`                                   |                               | N                |
 | `cudaGraphHostNodeGetParams`                              |                               | N                |
 | `cudaGraphHostNodeSetParams`                              |                               | N                |
 | `cudaGraphInstantiate`                                    |                               | N                |
 | `cudaGraphExecKernelNodeSetParams`                        |                               | N                |
-
 | `cudaGraphExecMemcpyNodeSetParams`                        |                               | N                |
 | `cudaGraphExecMemsetNodeSetParams`                        |                               | N                |
 | `cudaGraphExecHostNodeSetParams`                          |                               | N                |
 | `cudaGraphExecUpdate`                                     |                               | N                |
 | `cudaGraphKernelNodeGetParams`                            |                               | N                |
-
 | `cudaGraphKernelNodeSetParams`                            |                               | N                |
 | `cudaGraphLaunch`                                         |                               | N                |
 | `cudaGraphMemcpyNodeGetParams`                            |                               | N                |
 | `cudaGraphMemcpyNodeSetParams`                            |                               | N                |
 | `cudaGraphMemsetNodeGetParams`                            |                               | N                |
-
 | `cudaGraphMemsetNodeSetParams`                            |                               | N                |
 | `cudaGraphNodeFindInClone`                                |                               | N                |
 | `cudaGraphNodeGetDependencies`                            |                               | N                |
 | `cudaGraphNodeGetDependentNodes`                          |                               | N                |
 | `cudaGraphNodeGetType`                                    |                               | N                |
-
 | `cudaGraphRemoveDependencies`                             |                               | N                |
 
 ... INCOMPLETE, there are 55 Graph API functions in CHIPBindings.cc
